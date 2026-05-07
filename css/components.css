@@ -1,13 +1,4 @@
 .hero-heading-wrap,
-.hero-cta-wrap {
-  padding: 1.5rem 0;
-}
-
-.hero-heading {
-  margin: 0;
-}
-
-.hero-heading-wrap,
 .disco-hero {
   background: linear-gradient(180deg, rgba(255, 45, 149, 0.08), rgba(0, 0, 0, 0));
 }
@@ -79,12 +70,6 @@
 .member-img {
   width: 120px;
   height: 120px;
-  border-radius: 1rem;
-}
-
-.member-card {
-  padding: 0.8rem;
-  border-radius: 1rem;
 }
 
 .member-hero-photo {
@@ -139,12 +124,6 @@
   border-radius: 0.85rem;
 }
 
-.quick-facts-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
 .spotify-embed,
 .spotify-embed-sm {
   width: 100%;
@@ -156,6 +135,7 @@
   overflow: auto;
   padding: 0.75rem 0.35rem;
   border-radius: 1rem;
+  scrollbar-gutter: stable;
 }
 
 .timeline {
