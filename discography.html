@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>TwiceVault – Discography</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <a href="#main-content" class="skip-nav">Skip to content</a>
+
+  <header class="sticky-top" data-site-header></header>
+
+  <section class="disco-hero text-center py-3">
+    <h1 class="display-4 fw-bold disco-heading" id="disco-heading">Discography</h1>
+    <p class="text-muted mt-1 mb-0" id="disco-subtitle">Albums, singles, and major releases from TWICE</p>
+  </section>
+
+  <main class="flex-grow-1" id="main-content">
+
+    <!-- Member profile — shown only when ?id= is present -->
+    <section id="member-profile-section" class="d-none py-5">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-md-4 text-center">
+            <div class="member-hero-photo rounded-3 overflow-hidden mx-auto">
+              <img id="member-photo" src="" alt="" class="w-100 h-100 object-fit-cover">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <h2 class="fw-bold mb-3">Profile</h2>
+            <table class="table table-borderless member-profile-table">
+              <tbody id="member-profile-table"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr id="member-profile-hr" class="d-none container border-secondary">
+
+    <section id="member-about-section" class="d-none py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-3" id="about-heading">About</h2>
+        <p class="about-text" id="member-about"></p>
+      </div>
+    </section>
+
+    <hr id="member-about-hr" class="d-none container border-secondary">
+
+    <section id="member-facts-section" class="d-none py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-3">Fun Facts</h2>
+        <div class="d-flex flex-column gap-2" id="member-facts"></div>
+      </div>
+    </section>
+
+    <hr id="member-facts-hr" class="d-none container border-secondary">
+
+    <section id="timeline-section" class="py-3">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-3 section-heading" id="timeline-heading">Release Timeline</h2>
+        <div class="timeline-wrapper">
+          <div class="timeline">
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/72WWZVAx6GtSbEeGESwDLo?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="The Story Begins – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">The Story Begins</h3>
+                <p class="text-muted small mb-0">October 20, 2015 &middot; 1st Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/6q2oUEqL9uzVXHCeKoA8JV?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Page Two – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Page Two</h3>
+                <p class="text-muted small mb-0">April 25, 2016 &middot; 2nd Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/5zQhaDNbiXHRqd8Y51I4vy?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="TWICEcoaster: Lane 1 – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">TWICEcoaster: Lane 1</h3>
+                <p class="text-muted small mb-0">October 24, 2016 &middot; 3rd Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/2Mw8oK3aJKmOa9YGWqpN2W?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Twicecoaster: Lane 2 – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Twicecoaster: Lane 2</h3>
+                <p class="text-muted small mb-0">February 20, 2017 &middot; Repackage Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/28PwDunFAR71toOCTYRvkf?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Signal – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Signal</h3>
+                <p class="text-muted small mb-0">May 15, 2017 &middot; 4th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/4R7QVSqBN0koJHcOL7PGb5?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="SIGNAL (Japanese ver.) – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">SIGNAL (Japanese ver.)</h3>
+                <p class="text-muted small mb-0">June 14, 2017 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/3RU5xvGbTAXCWoUSqGf7dk?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="#TWICE – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">#TWICE</h3>
+                <p class="text-muted small mb-0">June 28, 2017 &middot; 1st Japanese Compilation Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/20tQIMCWsH5GjJUlSX5tBb?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="One More Time – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">One More Time</h3>
+                <p class="text-muted small mb-0">October 18, 2017 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/3hJXmK5gWN9P6jtZL0Lr2y?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Twicetagram – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Twicetagram</h3>
+                <p class="text-muted small mb-0">October 30, 2017 &middot; 1st Full Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/0R7pj4tnmcoUulrZGPo6nw?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Merry & Happy – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Merry &amp; Happy</h3>
+                <p class="text-muted small mb-0">December 11, 2017 &middot; Repackage Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/4t6JjDorVawKA34IhApYC4?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Candy Pop – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Candy Pop</h3>
+                <p class="text-muted small mb-0">February 7, 2018 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/5o5cJ6yZmcyy4y4hK0J6de?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="What is Love? – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">What is Love?</h3>
+                <p class="text-muted small mb-0">April 9, 2018 &middot; 5th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/3Jecy9h7h2n0eHOWYLEuLJ?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Wake Me Up – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Wake Me Up</h3>
+                <p class="text-muted small mb-0">May 16, 2018 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/2GKTroaa4ysyhEdvzpvUoM?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Summer Nights – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Summer Nights</h3>
+                <p class="text-muted small mb-0">July 9, 2018 &middot; Special Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/4tMqTWDGI8qiYaAUT4qy4p?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="BDZ – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">BDZ</h3>
+                <p class="text-muted small mb-0">July 25, 2018 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/3Bi7hl11zYHpw6uE6gAtSs?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="BDZ – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">BDZ</h3>
+                <p class="text-muted small mb-0">September 12, 2018 &middot; 1st Japanese Full Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/25VunQEW0x2W6ALND2Mh4g?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="YES or YES – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">YES or YES</h3>
+                <p class="text-muted small mb-0">November 5, 2018 &middot; 6th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/0Dsbej1ME76kebKBGE0ROD?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="I WANT YOU BACK – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">I WANT YOU BACK</h3>
+                <p class="text-muted small mb-0">November 16, 2018 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/0pzmyJftuTK7i4HLjnfq1n?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="The year of " YES" – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">The year of &quot;YES&quot;</h3>
+                <p class="text-muted small mb-0">December 12, 2018 &middot; Special Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/7x2I2T56E162miRzBh2Rpw?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="STAY BY MY SIDE – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">STAY BY MY SIDE</h3>
+                <p class="text-muted small mb-0">December 26, 2018 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/1dZtA3Lt9sUGqkM6KWY92x?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="BDZ (Repackage) – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">BDZ (Repackage)</h3>
+                <p class="text-muted small mb-0">December 26, 2018 &middot; Repackage Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/446I5WnjEJvkvmGhUf5IzT?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="LIKEY - Japanese ver. – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">LIKEY - Japanese ver.</h3>
+                <p class="text-muted small mb-0">January 11, 2019 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/0auI49a6lE4phcRVY8hKiY?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="What is Love? - Japanese ver. – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">What is Love? - Japanese ver.</h3>
+                <p class="text-muted small mb-0">February 8, 2019 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/2QmO12UqPp1BQN4kSGtcAx?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="#TWICE2 – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">#TWICE2</h3>
+                <p class="text-muted small mb-0">March 6, 2019 &middot; 2nd Japanese Compilation Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/3aLpWFejbsdyafODLXRqwF?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="FANCY YOU – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">FANCY YOU</h3>
+                <p class="text-muted small mb-0">April 22, 2019 &middot; 7th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/1yPkYnRgZveWLCUSWX16ra?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="HAPPY HAPPY – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">HAPPY HAPPY</h3>
+                <p class="text-muted small mb-0">July 17, 2019 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/7dU0vceNngXWT2XZUU4y9W?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Breakthrough – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Breakthrough</h3>
+                <p class="text-muted small mb-0">July 24, 2019 &middot; Japanese Single Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/3NQBPabmRm3LzVcmtkTLfo?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Feel Special – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Feel Special</h3>
+                <p class="text-muted small mb-0">September 23, 2019 &middot; 8th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/2sKWWJ5ee3EnKBztzxPpMH?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Fake & True – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Fake &amp; True</h3>
+                <p class="text-muted small mb-0">October 18, 2019 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/2MwyDQhotK4B1WcZ5ogrtB?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="&TWICE – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">&amp;TWICE</h3>
+                <p class="text-muted small mb-0">November 20, 2019 &middot; 2nd Japanese Full Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/64Tvx7Ca3BjA4STHq1wFap?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="&TWICE (Repackage) – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">&amp;TWICE (Repackage)</h3>
+                <p class="text-muted small mb-0">February 5, 2020 &middot; Repackage Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/5KsduuDNWzt65TaHzmtciv?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="MORE & MORE – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">MORE &amp; MORE</h3>
+                <p class="text-muted small mb-0">June 1, 2020 &middot; 9th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/49moLXpCwwantnF78yItWf?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Fanfare – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Fanfare</h3>
+                <p class="text-muted small mb-0">July 8, 2020 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/03wvlNaxFKB9sge4U6vyPE?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="MORE & MORE (English Version) – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">MORE &amp; MORE (English Version)</h3>
+                <p class="text-muted small mb-0">August 21, 2020 &middot; English Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/64yv4Oj1BfZse3JswH5iBH?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="STUCK IN MY HEAD - Japanese ver. – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">STUCK IN MY HEAD - Japanese ver.</h3>
+                <p class="text-muted small mb-0">September 16, 2020 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/5CCOdkAWMzHFQCky3Lbfw5?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="#TWICE3 – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">#TWICE3</h3>
+                <p class="text-muted small mb-0">September 16, 2020 &middot; 3rd Japanese Compilation Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/33jypnU7WULxPaVrjj4RXH?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Eyes Wide Open – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Eyes Wide Open</h3>
+                <p class="text-muted small mb-0">October 26, 2020 &middot; 2nd Full Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/0rSMzlAKNapoat4NdZYmi3?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="BETTER – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">BETTER</h3>
+                <p class="text-muted small mb-0">November 18, 2020 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/4viLaKGdHwhW8LkZB3mRFC?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="I CAN'T STOP ME (English Version) – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">I CAN'T STOP ME (English Version)</h3>
+                <p class="text-muted small mb-0">November 30, 2020 &middot; English Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/2xtP8RNbo2BEMzLX7tK7aq?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="CRY FOR ME – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">CRY FOR ME</h3>
+                <p class="text-muted small mb-0">December 18, 2020 &middot; Single</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/track/0SiX8tNiIZskZrPiAh6XxX?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Kura Kura – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Kura Kura</h3>
+                <p class="text-muted small mb-0">May 12, 2021 &middot; Japanese Single</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/4qX4JoSOyUfmxKh3q9TMb5?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Taste of Love – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Taste of Love</h3>
+                <p class="text-muted small mb-0">June 11, 2021 &middot; 10th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/55sHOFCagPn3BKQLY1gam0?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Formula of Love: O+T=<3 – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Formula of Love: O+T=&lt;3</h3>
+                <p class="text-muted small mb-0">November 12, 2021 &middot; 3rd Full Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/3dOVDnrzGJR2JDKBgJOtJh?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="BETWEEN 1&2 – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">BETWEEN 1&amp;2</h3>
+                <p class="text-muted small mb-0">August 26, 2022 &middot; 11th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/2eFOEZFLa3LIrGCbcnpGHt?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="READY TO BE – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">READY TO BE</h3>
+                <p class="text-muted small mb-0">March 10, 2023 &middot; 12th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/6LzKqp5mVJxfBxBFnJB2j1?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="With YOU-th – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">With YOU-th</h3>
+                <p class="text-muted small mb-0">February 23, 2024 &middot; 13th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item left">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/1Mvkni4G0JuPGkiSjhB8gN?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="STRATEGY – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">STRATEGY</h3>
+                <p class="text-muted small mb-0">December 6, 2024 &middot; 14th Mini Album</p>
+              </div>
+            </div>
+            <div class="timeline-item right">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <iframe class="spotify-embed"
+                  data-src="https://open.spotify.com/embed/album/7zyibWit2LeHvy5h9utbfg?utm_source=generator"
+                  height="352" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy" title="Ten: The Story Goes On – Spotify player"></iframe>
+                <h3 class="mt-3 fw-bold">Ten: The Story Goes On</h3>
+                <p class="text-muted small mb-0">October 10, 2025 &middot; 4th Full Album</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr id="top-tracks-hr" class="container border-secondary">
+    <section id="top-tracks-section" class="py-5">
+      <div class="container">
+        <div class="row g-5 align-items-stretch">
+          <div class="col-12 col-xxl-6 d-flex flex-column">
+            <h2 class="fw-bold mb-3 section-heading">Signature Tracks</h2>
+            <p class="text-muted small mb-4">Spotify play counts and daily numbers change too quickly to stay accurate
+              here,
+              so this section focuses on major TWICE songs with stable release info instead of hard-coded live stats.
+            </p>
+            <div class="flex-grow-1 d-none d-xxl-block">
+              <table class="table table-dark align-middle top-tracks-table h-100 mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Song title</th>
+                    <th scope="col" class="text-end">Release</th>
+                    <th scope="col" class="text-end">Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><iframe class="spotify-embed-sm"
+                        src="https://open.spotify.com/embed/track/3zhbXKFjUDw40pTYyCgt1Y?utm_source=generator"
+                        height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="What Is Love? – Spotify player"></iframe></td>
+                    <td class="text-end">2018</td>
+                    <td class="text-end">Korean single</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><iframe class="spotify-embed-sm"
+                        src="https://open.spotify.com/embed/track/2qQpFbqqkLOGySgNK8wBXt?utm_source=generator"
+                        height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="FANCY – Spotify player"></iframe></td>
+                    <td class="text-end">2019</td>
+                    <td class="text-end">Korean single</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><iframe class="spotify-embed-sm"
+                        src="https://open.spotify.com/embed/track/1utDFK1ARQcuZSwapf3cfb?utm_source=generator"
+                        height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="The Feels – Spotify player"></iframe></td>
+                    <td class="text-end">2021</td>
+                    <td class="text-end">English single</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><iframe class="spotify-embed-sm"
+                        src="https://open.spotify.com/embed/track/37ZtpRBkHcaq6hHy0X98zn?utm_source=generator"
+                        height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="I CAN'T STOP ME – Spotify player"></iframe></td>
+                    <td class="text-end">2020</td>
+                    <td class="text-end">Korean single</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td><iframe class="spotify-embed-sm"
+                        src="https://open.spotify.com/embed/track/3Hz3tTQwOdM6XkA0ALB2G9?utm_source=generator"
+                        height="80" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy" title="Feel Special – Spotify player"></iframe></td>
+                    <td class="text-end">2019</td>
+                    <td class="text-end">Korean single</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="top-tracks-mobile-list d-grid gap-3 d-xxl-none">
+              <article class="top-track-mobile-card">
+                <div class="top-track-mobile-head">
+                  <span class="top-track-mobile-rank">1</span>
+                  <span class="top-track-mobile-label">Featured Track</span>
+                </div>
+                <iframe class="spotify-embed-sm"
+                  src="https://open.spotify.com/embed/track/3zhbXKFjUDw40pTYyCgt1Y?utm_source=generator" height="80"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+                  title="What Is Love? – Spotify player"></iframe>
+                <div class="top-track-mobile-stats">
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Release</span>
+                    <span class="top-track-mobile-stat-value">2018</span>
+                  </div>
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Type</span>
+                    <span class="top-track-mobile-stat-value">Korean single</span>
+                  </div>
+                </div>
+              </article>
+              <article class="top-track-mobile-card">
+                <div class="top-track-mobile-head">
+                  <span class="top-track-mobile-rank">2</span>
+                  <span class="top-track-mobile-label">Featured Track</span>
+                </div>
+                <iframe class="spotify-embed-sm"
+                  src="https://open.spotify.com/embed/track/2qQpFbqqkLOGySgNK8wBXt?utm_source=generator" height="80"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+                  title="FANCY – Spotify player"></iframe>
+                <div class="top-track-mobile-stats">
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Release</span>
+                    <span class="top-track-mobile-stat-value">2019</span>
+                  </div>
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Type</span>
+                    <span class="top-track-mobile-stat-value">Korean single</span>
+                  </div>
+                </div>
+              </article>
+              <article class="top-track-mobile-card">
+                <div class="top-track-mobile-head">
+                  <span class="top-track-mobile-rank">3</span>
+                  <span class="top-track-mobile-label">Featured Track</span>
+                </div>
+                <iframe class="spotify-embed-sm"
+                  src="https://open.spotify.com/embed/track/1utDFK1ARQcuZSwapf3cfb?utm_source=generator" height="80"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+                  title="The Feels – Spotify player"></iframe>
+                <div class="top-track-mobile-stats">
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Release</span>
+                    <span class="top-track-mobile-stat-value">2021</span>
+                  </div>
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Type</span>
+                    <span class="top-track-mobile-stat-value">English single</span>
+                  </div>
+                </div>
+              </article>
+              <article class="top-track-mobile-card">
+                <div class="top-track-mobile-head">
+                  <span class="top-track-mobile-rank">4</span>
+                  <span class="top-track-mobile-label">Featured Track</span>
+                </div>
+                <iframe class="spotify-embed-sm"
+                  src="https://open.spotify.com/embed/track/37ZtpRBkHcaq6hHy0X98zn?utm_source=generator" height="80"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+                  title="I CAN'T STOP ME – Spotify player"></iframe>
+                <div class="top-track-mobile-stats">
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Release</span>
+                    <span class="top-track-mobile-stat-value">2020</span>
+                  </div>
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Type</span>
+                    <span class="top-track-mobile-stat-value">Korean single</span>
+                  </div>
+                </div>
+              </article>
+              <article class="top-track-mobile-card">
+                <div class="top-track-mobile-head">
+                  <span class="top-track-mobile-rank">5</span>
+                  <span class="top-track-mobile-label">Featured Track</span>
+                </div>
+                <iframe class="spotify-embed-sm"
+                  src="https://open.spotify.com/embed/track/3Hz3tTQwOdM6XkA0ALB2G9?utm_source=generator" height="80"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
+                  title="Feel Special – Spotify player"></iframe>
+                <div class="top-track-mobile-stats">
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Release</span>
+                    <span class="top-track-mobile-stat-value">2019</span>
+                  </div>
+                  <div class="top-track-mobile-stat">
+                    <span class="top-track-mobile-stat-label">Type</span>
+                    <span class="top-track-mobile-stat-value">Korean single</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-12 col-xxl-6 d-flex flex-column">
+            <h2 class="fw-bold mb-3 section-heading">Watch Time To Twice</h2>
+            <p class="text-muted small mb-3">Time to TWICE is the official variety series featuring TWICE, where the
+              members take on fun games, challenges, and themed missions. The show highlights their personalities,
+              humor, and chemistry as they compete, joke around, and create memorable moments together.</p>
+            <figure class="ratio ratio-16x9 rounded-3 overflow-hidden flex-grow-1">
+              <iframe src="https://www.youtube.com/embed/videoseries?list=PL5hjFu4TjrW2_k2HiWjf7bdr4vQNzKoQH"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                loading="lazy" title="Time To TWICE playlist"></iframe>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <hr id="quick-facts-hr" class="container border-secondary">
+
+    <section id="quick-facts-section" class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-4 section-heading">Quick Facts</h2>
+        <ul class="list-unstyled quick-facts-grid">
+          <li class="fun-fact-item"><i class="bi bi-trophy-fill me-2"></i><strong>Debut:</strong> October 20, 2015</li>
+          <li class="fun-fact-item"><i class="bi bi-people-fill me-2"></i><strong>Members:</strong> 9 (Nayeon,
+            Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, Tzuyu)</li>
+          <li class="fun-fact-item"><i class="bi bi-building me-2"></i><strong>Labels:</strong> <span lang="ko">JYP
+              엔터테인먼트</span> (JYP Entertainment), Warner Japan, Republic</li>
+          <li class="fun-fact-item"><i class="bi bi-vinyl-fill me-2"></i><strong>Korean Albums:</strong> 5 full, 14 mini
+          </li>
+          <li class="fun-fact-item"><i class="bi bi-globe me-2"></i><strong>Fandom:</strong> ONCE</li>
+          <li class="fun-fact-item"><i class="bi bi-music-note-beamed me-2"></i><strong>Most-streamed on
+              Spotify:</strong> &quot;What Is Love?&quot; (650M+)</li>
+        </ul>
+      </div>
+    </section>
+
+    <hr class="container border-secondary">
+    <section class="requests-form py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-4">Requests &amp; Corrections</h2>
+        <p class="text-muted mb-4">Found an error, a missing album, or have a suggestion? Let us know!</p>
+        <form class="request-form" action="mailto:example@twicevault.com" method="POST" enctype="text/plain">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <label for="req-name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="req-name" name="name" placeholder="Your name" maxlength="100"
+                autocomplete="name" required>
+            </div>
+            <div class="col-md-6">
+              <label for="req-email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="req-email" name="email" placeholder="Your email"
+                maxlength="254" autocomplete="email" required>
+            </div>
+            <div class="col-12">
+              <fieldset>
+                <legend class="form-label">Request Type</legend>
+                <div class="d-flex flex-wrap gap-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="request-type" id="type-missing"
+                      value="Missing album" required>
+                    <label class="form-check-label" for="type-missing">Missing album</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="request-type" id="type-incorrect"
+                      value="Incorrect information">
+                    <label class="form-check-label" for="type-incorrect">Incorrect information</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="request-type" id="type-suggestion"
+                      value="Content suggestion">
+                    <label class="form-check-label" for="type-suggestion">Content suggestion</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-12">
+              <fieldset>
+                <legend class="visually-hidden">Notification preference</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="notify-me" name="notify" value="yes">
+                  <label class="form-check-label" for="notify-me">Notify me when the issue is resolved</label>
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-12">
+              <label for="req-message" class="form-label">Message</label>
+              <textarea class="form-control" id="req-message" name="message" rows="5" maxlength="2000"
+                placeholder="Describe the issue or suggestion..." required></textarea>
+            </div>
+            <div class="col-12 d-flex gap-3">
+              <button type="submit" class="btn btn-neon px-4">Submit</button>
+              <button type="reset" class="btn btn-outline-light px-4">Reset</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+  <footer class="mt-auto" data-site-footer></footer>
+  <script src="javascript/layout.js"></script>
+  <script src="javascript/nav.js"></script>
+  <script src="javascript/member.js"></script>
+  <script src="javascript/timeline.js"></script>
+</body>
+
+</html>

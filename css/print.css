@@ -1,0 +1,51 @@
+@media print {
+
+  header,
+  footer,
+  iframe,
+  video,
+  .carousel,
+  .gallery-lightbox,
+  .skip-nav,
+  .btn,
+  .timeline-wrapper {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+
+  img {
+    max-width: 200px !important;
+    height: auto !important;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
