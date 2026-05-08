@@ -1,4 +1,6 @@
 (function () {
+    var ACCESSIBILITY_STORAGE_KEY = 'twicevault-accessibility-variant';
+
     var pageConfig = {
         'index.html': {
             activeHref: 'index.html',
@@ -70,6 +72,59 @@
         }).join('') + '</ul>';
     }
 
+    function renderAccessibilityToggle() {
+        return '<li class="nav-item">' +
+            '<button type="button" class="nav-link accessibility-toggle px-2 py-2 d-inline-flex align-items-center justify-content-center" data-a11y-toggle aria-pressed="false" aria-label="Toggle high-contrast uppercase mode" title="Toggle high-contrast uppercase mode">' +
+            '<i class="bi bi-universal-access-circle"></i>' +
+            '<span class="a11y-toggle-label ms-1 d-none d-xl-inline">A11Y</span>' +
+            '</button>' +
+            '</li>';
+    }
+
+    function getStoredAccessibilityPreference() {
+        try {
+            return localStorage.getItem(ACCESSIBILITY_STORAGE_KEY) === 'on';
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function setStoredAccessibilityPreference(enabled) {
+        try {
+            localStorage.setItem(ACCESSIBILITY_STORAGE_KEY, enabled ? 'on' : 'off');
+        } catch (e) {
+            // Ignore storage failures in restricted contexts.
+        }
+    }
+
+    function applyAccessibilityMode(enabled) {
+        if (!document.body) return;
+        document.body.classList.toggle('accessibility-variant', enabled);
+    }
+
+    function updateAccessibilityControls(enabled) {
+        document.querySelectorAll('[data-a11y-toggle]').forEach(function (btn) {
+            btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+            btn.setAttribute('title', enabled ? 'Disable high-contrast uppercase mode' : 'Enable high-contrast uppercase mode');
+            btn.setAttribute('aria-label', enabled ? 'Disable high-contrast uppercase mode' : 'Enable high-contrast uppercase mode');
+        });
+    }
+
+    function setupAccessibilityToggle() {
+        var enabled = getStoredAccessibilityPreference();
+        applyAccessibilityMode(enabled);
+        updateAccessibilityControls(enabled);
+
+        document.querySelectorAll('[data-a11y-toggle]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                enabled = !enabled;
+                applyAccessibilityMode(enabled);
+                setStoredAccessibilityPreference(enabled);
+                updateAccessibilityControls(enabled);
+            });
+        });
+    }
+
     function renderHeader(config) {
         return '<nav class="navbar navbar-expand-lg py-2" aria-label="Primary">' +
             '<div class="container position-relative gap-3">' +
@@ -79,7 +134,12 @@
             '<span class="navbar-toggler-box" aria-hidden="true"><span class="navbar-toggler-inner"></span></span></button>' +
             '<div class="collapse navbar-collapse nav-shell mt-3 mt-lg-0" id="siteNav">' +
             '<ul class="navbar-nav nav-primary mb-3 mb-lg-0 me-lg-auto gap-lg-2 fw-medium">' + renderNavLinks(config.activeHref) + '</ul>' +
-            renderSocialLinks('nav-socials navbar-nav flex-row justify-content-center justify-content-lg-end gap-2', 'nav-link fs-5 px-2 py-2 d-inline-flex align-items-center justify-content-center', 'TWICE social links') +
+            '<ul class="nav-socials navbar-nav flex-row justify-content-center justify-content-lg-end gap-2 list-unstyled mb-0" aria-label="Accessibility and TWICE social links">' +
+            renderAccessibilityToggle() +
+            socialItems.map(function (item) {
+                return '<li class="nav-item"><a href="' + item.href + '" class="nav-link fs-5 px-2 py-2 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener noreferrer" aria-label="' + item.label + '"><i class="bi bi-' + item.icon + '"></i></a></li>';
+            }).join('') +
+            '</ul>' +
             '</div></div>' +
             '</nav>';
     }
@@ -118,4 +178,6 @@
     if (footer) {
         footer.innerHTML = renderFooter();
     }
+
+    setupAccessibilityToggle();
 })();

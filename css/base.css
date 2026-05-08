@@ -18,6 +18,8 @@
   --surface-strong: rgba(16, 16, 28, 0.94);
   --surface-border: rgba(255, 255, 255, 0.08);
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.28);
+  --link-unvisited: #87ecff;
+  --link-visited: #9aaab9;
   --scrollbar-track: rgba(255, 255, 255, 0.08);
   --scrollbar-thumb: linear-gradient(180deg, rgba(255, 45, 149, 0.92), rgba(0, 240, 255, 0.82));
   --scrollbar-thumb-hover: linear-gradient(180deg, #ff66b6, #41f7ff);
@@ -119,7 +121,7 @@ header .navbar {
   --bs-navbar-toggler-border-color: transparent;
 }
 
-header .navbar > .container {
+header .navbar>.container {
   gap: 1rem;
 }
 
@@ -186,6 +188,26 @@ header .navbar-nav .nav-link:visited {
   min-width: 44px;
   justify-content: center;
   transition: color 0.2s, transform 0.2s, filter 0.2s;
+}
+
+.accessibility-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 1.05rem;
+}
+
+.a11y-toggle-label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.accessibility-toggle[aria-pressed='true'] {
+  color: #111;
+  background: #ffe600;
+  border-color: #ffe600;
+  box-shadow: 0 0 0 2px rgba(255, 230, 0, 0.35);
 }
 
 .nav-socials .nav-link:hover {
@@ -352,7 +374,7 @@ footer {
 
 .footer-nav .nav-link,
 .footer-meta .nav-link {
-  color: var(--text-soft);
+  color: var(--text);
   min-height: 44px;
   display: inline-flex;
   align-items: center;
@@ -381,10 +403,119 @@ hr.container.border-secondary {
 
 main p a,
 .about-text a {
+  color: var(--link-unvisited);
   text-decoration: underline;
+  text-decoration-color: rgba(135, 236, 255, 0.72);
+}
+
+main p a:visited,
+.about-text a:visited {
+  color: var(--link-visited);
+  text-decoration-color: rgba(154, 170, 185, 0.55);
 }
 
 main p a:hover,
 .about-text a:hover {
   color: var(--accent);
+}
+
+/* ========================
+   Accessibility Variant
+   ======================== */
+
+body.accessibility-variant {
+  --primary: #ffffff;
+  --primary-dark: #ffffff;
+  --primary-glow: rgba(255, 255, 255, 0.35);
+  --accent: #ffe600;
+  --accent-glow: rgba(255, 230, 0, 0.48);
+  --bg: #000000;
+  --bg-card: #000000;
+  --text: #ffffff;
+  --text-soft: #f2f2f2;
+  --surface: #000000;
+  --surface-strong: #000000;
+  --surface-border: rgba(255, 255, 255, 0.85);
+  --shadow-soft: none;
+  --link-unvisited: #00ffff;
+  --link-visited: #ffe680;
+  background: #000;
+  color: #fff;
+}
+
+body.accessibility-variant :is(h1, h2, h3, h4, h5, h6, p, a, button, label, th, td, li, summary, legend, figcaption, small, strong, span) {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+body.accessibility-variant header,
+body.accessibility-variant footer,
+body.accessibility-variant .fun-fact-item,
+body.accessibility-variant .timeline-wrapper,
+body.accessibility-variant .timeline-content,
+body.accessibility-variant .member-profile-table,
+body.accessibility-variant .top-tracks-table,
+body.accessibility-variant .quick-facts-details,
+body.accessibility-variant .gallery-thumb,
+body.accessibility-variant .request-form .form-control {
+  background: #000 !important;
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
+body.accessibility-variant .section-heading,
+body.accessibility-variant .nav-title,
+body.accessibility-variant .text-muted {
+  color: #fff !important;
+}
+
+body.accessibility-variant .btn,
+body.accessibility-variant .gallery-filter,
+body.accessibility-variant .navbar-toggler,
+body.accessibility-variant .gallery-lightbox-close,
+body.accessibility-variant .gallery-lightbox-prev,
+body.accessibility-variant .gallery-lightbox-next {
+  background: #000 !important;
+  color: #fff !important;
+  border: 2px solid #fff !important;
+}
+
+body.accessibility-variant .btn:hover,
+body.accessibility-variant .gallery-filter:hover,
+body.accessibility-variant .navbar-toggler:hover,
+body.accessibility-variant .gallery-lightbox-close:hover,
+body.accessibility-variant .gallery-lightbox-prev:hover,
+body.accessibility-variant .gallery-lightbox-next:hover {
+  color: #000 !important;
+  background: #ffe600 !important;
+  border-color: #ffe600 !important;
+}
+
+body.accessibility-variant .navbar-nav .nav-link,
+body.accessibility-variant .footer-nav .nav-link,
+body.accessibility-variant .footer-meta .nav-link,
+body.accessibility-variant .nav-socials .nav-link,
+body.accessibility-variant .footer-socials .nav-link {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+body.accessibility-variant .navbar-nav .nav-link:hover,
+body.accessibility-variant .navbar-nav .nav-link.active,
+body.accessibility-variant .footer-nav .nav-link:hover,
+body.accessibility-variant .footer-meta .nav-link:hover,
+body.accessibility-variant .nav-socials .nav-link:hover,
+body.accessibility-variant .footer-socials .nav-link:hover {
+  color: #000 !important;
+  background: #ffe600 !important;
+  border-bottom-color: #ffe600 !important;
+  text-shadow: none !important;
+}
+
+body.accessibility-variant .navbar-nav .nav-link:visited,
+body.accessibility-variant .footer-nav .nav-link:visited,
+body.accessibility-variant .footer-meta .nav-link:visited,
+body.accessibility-variant .nav-socials .nav-link:visited,
+body.accessibility-variant .footer-socials .nav-link:visited {
+  color: #d0d0d0 !important;
 }
