@@ -148,23 +148,9 @@
     function renderFooter() {
         return '<div class="container py-4">' +
             '<div class="text-center mb-3">' +
-            '<a href="index.html" class="logo d-inline-block"><img src="img/TWICE_LOGO.png" alt="TWICE Logo"></a>' +
-            '</div>' +
-            '<ul class="footer-nav nav justify-content-center gap-2 gap-sm-3 mb-3 small">' +
-            navItems.map(function (item) {
-                return '<li class="nav-item"><a href="' + item.href + '" class="nav-link px-2">' + item.label + '</a></li>';
-            }).join('') +
-            '</ul>' +
+            '<p class="mb-3 text-muted small">Made by Blaschek Loránd</p>' +
             renderSocialLinks('footer-socials nav justify-content-center gap-2 fs-5', 'nav-link px-2 py-2 d-inline-flex align-items-center justify-content-center', 'TWICE social links') +
             '</div>' +
-            '<div class="container border-top border-light border-opacity-10 py-3">' +
-            '<div class="row gy-2 align-items-center small">' +
-            '<div class="col-md text-center text-md-start">Copyright &copy; 2025 <strong>Website</strong>. All rights reserved.</div>' +
-            '<div class="col-md-auto">' +
-            '<ul class="footer-meta nav justify-content-center justify-content-md-end column-gap-2 row-gap-1">' +
-            '<li class="nav-item"><a href="#" class="nav-link px-0">Terms &amp; Conditions</a></li>' +
-            '<li class="nav-item"><a href="#" class="nav-link px-0">Privacy Policy</a></li>' +
-            '</ul></div></div>' +
             '</div>';
     }
 
