@@ -65,8 +65,9 @@
         }).join('');
     }
 
-    function renderSocialLinks(containerClass, linkClass, listLabel) {
-        return '<ul class="' + containerClass + ' list-unstyled mb-0" aria-label="' + listLabel + '">' + socialItems.map(function (item) {
+    function renderSocialLinks(containerClass, linkClass, listLabel, prefixMarkup) {
+        var prefix = prefixMarkup || '';
+        return '<ul class="' + containerClass + ' list-unstyled mb-0" aria-label="' + listLabel + '">' + prefix + socialItems.map(function (item) {
             return '<li class="nav-item"><a href="' + item.href + '" class="' + linkClass + '" target="_blank" rel="noopener noreferrer" aria-label="' + item.label + '">' +
                 '<i class="bi bi-' + item.icon + '"></i></a></li>';
         }).join('') + '</ul>';
@@ -134,12 +135,12 @@
             '<span class="navbar-toggler-box" aria-hidden="true"><span class="navbar-toggler-inner"></span></span></button>' +
             '<div class="collapse navbar-collapse nav-shell mt-3 mt-lg-0" id="siteNav">' +
             '<ul class="navbar-nav nav-primary mb-3 mb-lg-0 me-lg-auto gap-lg-2 fw-medium">' + renderNavLinks(config.activeHref) + '</ul>' +
-            '<ul class="nav-socials navbar-nav flex-row justify-content-center justify-content-lg-end gap-2 list-unstyled mb-0" aria-label="Accessibility and TWICE social links">' +
-            renderAccessibilityToggle() +
-            socialItems.map(function (item) {
-                return '<li class="nav-item"><a href="' + item.href + '" class="nav-link fs-5 px-2 py-2 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener noreferrer" aria-label="' + item.label + '"><i class="bi bi-' + item.icon + '"></i></a></li>';
-            }).join('') +
-            '</ul>' +
+            renderSocialLinks(
+                'nav-socials navbar-nav flex-row justify-content-center justify-content-lg-end gap-2',
+                'nav-link fs-5 px-2 py-2 d-inline-flex align-items-center justify-content-center',
+                'Accessibility and TWICE social links',
+                renderAccessibilityToggle()
+            ) +
             '</div></div>' +
             '</nav>';
     }

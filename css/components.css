@@ -68,8 +68,8 @@
 }
 
 .member-img {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
 }
 
 .member-hero-photo {
@@ -128,6 +128,14 @@
 .spotify-embed-sm {
   width: 100%;
   border: 0;
+}
+
+.spotify-embed {
+  height: min(55vh, 22rem);
+}
+
+.spotify-embed-sm {
+  height: clamp(5rem, 10vw, 6rem);
 }
 
 .timeline-wrapper {
@@ -207,7 +215,7 @@
 }
 
 .timeline-content iframe {
-  height: 152px;
+  height: 9.5rem;
 }
 
 .top-tracks-table thead th {
@@ -286,7 +294,7 @@
 }
 
 .top-track-mobile-card .spotify-embed-sm {
-  height: 96px;
+  height: 6rem;
   margin-bottom: 0.75rem;
 }
 
@@ -353,6 +361,63 @@
   box-shadow: 0 0 16px rgba(0, 240, 255, 0.22);
 }
 
+.gallery-highlight-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 196, 72, 0.24);
+  background: linear-gradient(135deg, rgba(255, 196, 72, 0.12), rgba(255, 45, 149, 0.08));
+  box-shadow: 0 0 18px rgba(255, 196, 72, 0.12), var(--shadow-soft);
+}
+
+.gallery-highlight-main {
+  max-width: 44rem;
+}
+
+.gallery-highlight-kicker {
+  color: #ffc448;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.gallery-highlight-subtitle {
+  color: var(--text-soft);
+}
+
+.gallery-highlight-note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+  max-width: 22rem;
+}
+
+.gallery-highlight-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 196, 72, 0.55);
+  background: rgba(0, 0, 0, 0.45);
+  color: #ffc448;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.gallery-highlight-caption {
+  color: var(--text-soft);
+  text-align: right;
+  font-size: 0.9rem;
+}
+
 .gallery-masonry {
   columns: 4;
   column-gap: 12px;
@@ -368,9 +433,31 @@
 }
 
 .gallery-thumb {
+  position: relative;
   cursor: pointer;
   overflow: hidden;
   border-radius: 1rem;
+}
+
+.gallery-item-own .gallery-thumb {
+  border-color: rgba(255, 196, 72, 0.42);
+  box-shadow: 0 0 18px rgba(255, 196, 72, 0.14), var(--shadow-soft);
+}
+
+.gallery-item-own .gallery-thumb::after {
+  content: 'Taken by me';
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 196, 72, 0.55);
+  color: #ffc448;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .gallery-thumb img {

@@ -401,16 +401,30 @@ hr.container.border-secondary {
    Links
    ======================== */
 
+main a:link {
+  color: var(--link-unvisited);
+}
+
+main a:visited {
+  color: var(--link-visited);
+}
+
+main a.text-reset:link {
+  color: var(--link-unvisited) !important;
+}
+
+main a.text-reset:visited {
+  color: var(--link-visited) !important;
+}
+
 main p a,
 .about-text a {
-  color: var(--link-unvisited);
   text-decoration: underline;
   text-decoration-color: rgba(135, 236, 255, 0.72);
 }
 
 main p a:visited,
 .about-text a:visited {
-  color: var(--link-visited);
   text-decoration-color: rgba(154, 170, 185, 0.55);
 }
 

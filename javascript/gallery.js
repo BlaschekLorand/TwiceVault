@@ -59,6 +59,36 @@
     });
   }
 
+  function scatterOwnPhotos() {
+    var ownItems = Array.from(grid.querySelectorAll('.gallery-item-own'));
+    if (!ownItems.length) return;
+
+    var nonOwnItems = Array.from(grid.querySelectorAll('.gallery-item:not(.gallery-item-own)'));
+    if (!nonOwnItems.length) return;
+
+    ownItems.forEach(function (item) { item.remove(); });
+
+    var total = nonOwnItems.length + ownItems.length;
+    var merged = [];
+    var ownIndex = 0;
+    var nonOwnIndex = 0;
+
+    for (var position = 0; position < total; position += 1) {
+      var expectedOwnByNow = ((position + 1) * ownItems.length) / total;
+      if (ownIndex < ownItems.length && ownIndex < expectedOwnByNow) {
+        merged.push(ownItems[ownIndex]);
+        ownIndex += 1;
+      } else {
+        merged.push(nonOwnItems[nonOwnIndex]);
+        nonOwnIndex += 1;
+      }
+    }
+
+    merged.forEach(function (item) { grid.appendChild(item); });
+  }
+
+  scatterOwnPhotos();
+
   grid.querySelectorAll('.gallery-thumb img').forEach(prepareThumbnail);
 
   document.querySelectorAll('.gallery-filter').forEach(function (btn) {

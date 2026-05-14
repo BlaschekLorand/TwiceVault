@@ -101,7 +101,7 @@ body {
   /* Member profile stacks vertically */
   .member-hero-photo {
     width: 100%;
-    max-width: 260px;
+    max-width: 16.25rem;
     height: 20rem;
   }
 
@@ -149,9 +149,21 @@ body {
 /* ========================
    Phone (≤480px)
    ======================== */
-@media (max-width: 480px) {
+@media (max-width: 576px) {
   .gallery-masonry {
     columns: 1;
+  }
+
+  .gallery-highlight-banner {
+    flex-direction: column;
+  }
+
+  .gallery-highlight-note {
+    align-items: flex-start;
+  }
+
+  .gallery-highlight-caption {
+    text-align: left;
   }
 
   /* Tighter section padding */
@@ -167,7 +179,7 @@ body {
 
   /* Latest album iframe */
   .latest-album iframe {
-    min-height: 380px;
+    min-height: 24rem;
   }
 
   /* Member cards — 3 per row on small screens */
