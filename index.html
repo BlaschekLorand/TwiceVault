@@ -26,9 +26,8 @@
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-indicators"></div>
       <div class="carousel-inner" id="heroSlides"></div>
-      <button type="button" class="carousel-pause-btn" aria-label="Pause carousel"
-        onclick="var c=bootstrap.Carousel.getInstance(document.getElementById('heroCarousel'));if(this.dataset.paused==='true'){c.cycle();this.dataset.paused='false';this.setAttribute('aria-label','Pause carousel');this.innerHTML='<i class=&quot;bi bi-pause-fill&quot;></i>';}else{c.pause();this.dataset.paused='true';this.setAttribute('aria-label','Play carousel');this.innerHTML='<i class=&quot;bi bi-play-fill&quot;></i>';}"
-        data-paused="false"><i class="bi bi-pause-fill"></i></button>
+      <button type="button" class="carousel-pause-btn" aria-label="Pause carousel" data-paused="false"><i
+          class="bi bi-pause-fill"></i></button>
     </div>
 
     <div class="text-center py-4 px-3 px-sm-0">
@@ -41,7 +40,7 @@
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-md-6">
-            <p class="text-uppercase small mb-2 latest-label">Latest Album</p>
+            <p class="text-uppercase small mb-2">Latest Album</p>
             <h2 class="fw-bold mb-1">Ten: The Story Goes On</h2>
             <p class="text-muted mb-1">Date: October 10, 2025</p>
             <p class="mb-4">TWICE's latest album "Ten: The Story Goes On" continues their musical journey with
@@ -49,7 +48,7 @@
           </div>
           <div class="col-md-6">
             <iframe class="spotify-embed"
-              src="https://open.spotify.com/embed/album/7zyibWit2LeHvy5h9utbfg?utm_source=generator" height="352"
+              src="https://open.spotify.com/embed/album/7zyibWit2LeHvy5h9utbfg?utm_source=generator"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"
               title="Ten: The Story Goes On – TWICE on Spotify"></iframe>
           </div>

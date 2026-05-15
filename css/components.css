@@ -385,10 +385,6 @@
   letter-spacing: 0.08em;
 }
 
-.gallery-highlight-subtitle {
-  color: var(--text-soft);
-}
-
 .gallery-highlight-note {
   display: flex;
   flex-direction: column;

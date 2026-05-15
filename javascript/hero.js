@@ -26,6 +26,28 @@
   // Load next slide image just before it becomes active
   var carousel = document.getElementById('heroCarousel');
   if (carousel) {
+    var pauseBtn = document.querySelector('.carousel-pause-btn');
+
+    if (pauseBtn && window.bootstrap && bootstrap.Carousel) {
+      pauseBtn.addEventListener('click', function () {
+        var c = bootstrap.Carousel.getOrCreateInstance(carousel);
+        var paused = pauseBtn.dataset.paused === 'true';
+
+        if (paused) {
+          c.cycle();
+          pauseBtn.dataset.paused = 'false';
+          pauseBtn.setAttribute('aria-label', 'Pause carousel');
+          pauseBtn.innerHTML = '<i class="bi bi-pause-fill"></i>';
+          return;
+        }
+
+        c.pause();
+        pauseBtn.dataset.paused = 'true';
+        pauseBtn.setAttribute('aria-label', 'Play carousel');
+        pauseBtn.innerHTML = '<i class="bi bi-play-fill"></i>';
+      });
+    }
+
     carousel.addEventListener('slide.bs.carousel', function (e) {
       var next = inner.querySelectorAll('.carousel-item')[e.to];
       if (!next) return;

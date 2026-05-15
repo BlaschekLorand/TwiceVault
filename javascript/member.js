@@ -181,47 +181,44 @@ const MEMBERS = {
     }
 };
 
-// Initialize member profile on page load if ?id= parameter is present
 document.addEventListener('DOMContentLoaded', function () {
-    (function () {
-        var id = new URLSearchParams(window.location.search).get('id');
-        var member = id ? MEMBERS[id.toLowerCase()] : null;
-        if (!member) return;
+    var id = new URLSearchParams(window.location.search).get('id');
+    var member = id ? MEMBERS[id.toLowerCase()] : null;
+    if (!member) return;
 
-        document.title = 'TwiceVault – ' + member.name;
-        document.getElementById('nav-title').textContent = 'TwiceVault - ' + member.name;
-        document.getElementById('disco-heading').textContent = member.name;
-        document.getElementById('disco-subtitle').textContent = member.subtitle;
-        document.getElementById('timeline-heading').textContent = member.name + '\'s Discography';
+    document.title = 'TwiceVault – ' + member.name;
+    document.getElementById('nav-title').textContent = 'TwiceVault - ' + member.name;
+    document.getElementById('disco-heading').textContent = member.name;
+    document.getElementById('disco-subtitle').textContent = member.subtitle;
+    document.getElementById('timeline-heading').textContent = member.name + '\'s Discography';
 
-        var photoContainer = document.getElementById('member-photo').parentElement;
-        photoContainer.setAttribute('data-member', id.toLowerCase());
-        var photo = document.getElementById('member-photo');
-        photo.src = member.photo;
-        photo.alt = member.name;
+    var photoContainer = document.getElementById('member-photo').parentElement;
+    photoContainer.setAttribute('data-member', id.toLowerCase());
+    var photo = document.getElementById('member-photo');
+    photo.src = member.photo;
+    photo.alt = member.name;
 
-        document.getElementById('member-profile-table').innerHTML = Object.entries(member.profile).map(function (e) {
-            return '<tr><th scope="row" class="text-muted">' + e[0] + '</th><td>' + e[1] + '</td></tr>';
-        }).join('');
+    document.getElementById('member-profile-table').innerHTML = Object.entries(member.profile).map(function (e) {
+        return '<tr><th scope="row" class="text-muted">' + e[0] + '</th><td>' + e[1] + '</td></tr>';
+    }).join('');
 
-        document.getElementById('about-heading').textContent = 'About ' + member.name;
-        document.getElementById('member-about').textContent = member.about;
+    document.getElementById('about-heading').textContent = 'About ' + member.name;
+    document.getElementById('member-about').textContent = member.about;
 
-        document.getElementById('member-facts').innerHTML = member.facts.map(function (f) {
-            return '<div class="fun-fact-item"><i class="bi bi-star-fill me-2"></i>' + f + '</div>';
-        }).join('');
+    document.getElementById('member-facts').innerHTML = member.facts.map(function (f) {
+        return '<div class="fun-fact-item"><i class="bi bi-star-fill me-2"></i>' + f + '</div>';
+    }).join('');
 
-        ['member-profile-section', 'member-profile-hr',
-            'member-about-section', 'member-about-hr',
-            'member-facts-section', 'member-facts-hr'].forEach(function (id) {
-                var el = document.getElementById(id);
-                if (el) el.classList.remove('d-none');
-            });
+    ['member-profile-section', 'member-profile-hr',
+        'member-about-section', 'member-about-hr',
+        'member-facts-section', 'member-facts-hr'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) el.classList.remove('d-none');
+        });
 
-        ['timeline-section', 'top-tracks-hr', 'top-tracks-section',
-            'quick-facts-hr', 'quick-facts-section'].forEach(function (id) {
-                var el = document.getElementById(id);
-                if (el) el.classList.add('d-none');
-            });
-    })();
+    ['timeline-section', 'top-tracks-hr', 'top-tracks-section',
+        'quick-facts-hr', 'quick-facts-section'].forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el) el.classList.add('d-none');
+        });
 });
