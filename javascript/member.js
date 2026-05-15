@@ -181,16 +181,41 @@ const MEMBERS = {
     }
 };
 
+// Member page rendering.
 document.addEventListener('DOMContentLoaded', function () {
     var id = new URLSearchParams(window.location.search).get('id');
     var member = id ? MEMBERS[id.toLowerCase()] : null;
     if (!member) return;
 
+    function setText(elementId, value) {
+        var el = document.getElementById(elementId);
+        if (el) el.textContent = value;
+    }
+
+    function setHtml(elementId, value) {
+        var el = document.getElementById(elementId);
+        if (el) el.innerHTML = value;
+    }
+
+    function show(ids) {
+        ids.forEach(function (targetId) {
+            var el = document.getElementById(targetId);
+            if (el) el.classList.remove('d-none');
+        });
+    }
+
+    function hide(ids) {
+        ids.forEach(function (targetId) {
+            var el = document.getElementById(targetId);
+            if (el) el.classList.add('d-none');
+        });
+    }
+
     document.title = 'TwiceVault – ' + member.name;
-    document.getElementById('nav-title').textContent = 'TwiceVault - ' + member.name;
-    document.getElementById('disco-heading').textContent = member.name;
-    document.getElementById('disco-subtitle').textContent = member.subtitle;
-    document.getElementById('timeline-heading').textContent = member.name + '\'s Discography';
+    setText('nav-title', 'TwiceVault - ' + member.name);
+    setText('disco-heading', member.name);
+    setText('disco-subtitle', member.subtitle);
+    setText('timeline-heading', member.name + '\'s Discography');
 
     var photoContainer = document.getElementById('member-photo').parentElement;
     photoContainer.setAttribute('data-member', id.toLowerCase());
@@ -198,27 +223,21 @@ document.addEventListener('DOMContentLoaded', function () {
     photo.src = member.photo;
     photo.alt = member.name;
 
-    document.getElementById('member-profile-table').innerHTML = Object.entries(member.profile).map(function (e) {
+    setHtml('member-profile-table', Object.entries(member.profile).map(function (e) {
         return '<tr><th scope="row" class="text-muted">' + e[0] + '</th><td>' + e[1] + '</td></tr>';
-    }).join('');
+    }).join(''));
 
-    document.getElementById('about-heading').textContent = 'About ' + member.name;
-    document.getElementById('member-about').textContent = member.about;
+    setText('about-heading', 'About ' + member.name);
+    setText('member-about', member.about);
 
-    document.getElementById('member-facts').innerHTML = member.facts.map(function (f) {
+    setHtml('member-facts', member.facts.map(function (f) {
         return '<div class="fun-fact-item"><i class="bi bi-star-fill me-2"></i>' + f + '</div>';
-    }).join('');
+    }).join(''));
 
-    ['member-profile-section', 'member-profile-hr',
+    show(['member-profile-section', 'member-profile-hr',
         'member-about-section', 'member-about-hr',
-        'member-facts-section', 'member-facts-hr'].forEach(function (id) {
-            var el = document.getElementById(id);
-            if (el) el.classList.remove('d-none');
-        });
+        'member-facts-section', 'member-facts-hr']);
 
-    ['timeline-section', 'top-tracks-hr', 'top-tracks-section',
-        'quick-facts-hr', 'quick-facts-section'].forEach(function (id) {
-            var el = document.getElementById(id);
-            if (el) el.classList.add('d-none');
-        });
+    hide(['timeline-section', 'top-tracks-hr', 'top-tracks-section',
+        'quick-facts-hr', 'quick-facts-section']);
 });

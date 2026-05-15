@@ -14,8 +14,8 @@ body {
 }
 
 /* ========================
-   Below XXL (≤1399.98px)
-   ======================== */
+  Below XXL (≤1399.98px)
+  ======================== */
 @media (max-width: 1399.98px) {
   .gallery-masonry {
     columns: 3;
@@ -30,26 +30,30 @@ body {
    Navbar collapse (≤991.98px)
    ======================== */
 @media (max-width: 991.98px) {
+  .nav-title {
+    display: none !important;
+  }
+
   header .navbar-collapse {
     margin-top: 0.75rem;
     padding: 0.75rem;
     background: var(--bg-card, #1a1a2e);
-    border: 1px solid rgba(255, 45, 149, 0.24);
+    border: 1px solid rgba(255, 45, 150, 0.25);
     border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 45, 149, 0.18);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45), 0 0 15px rgba(255, 45, 150, 0.2);
     transform-origin: top;
   }
 
   header .navbar-toggler.collapsed~.navbar-collapse.collapsing {
     opacity: 0;
-    transform: translateY(-0.45rem) scale(0.98);
+    transform: translateY(-0.45rem) scale(1);
     transition: height 0.35s ease, opacity 0.2s ease, transform 0.35s ease;
   }
 
   header .navbar-toggler:not(.collapsed)~.navbar-collapse.collapsing {
     opacity: 1;
     transform: translateY(0) scale(1);
-    transition: height 0.35s ease, opacity 0.24s ease, transform 0.35s ease;
+    transition: height 0.35s ease, opacity 0.25s ease, transform 0.35s ease;
   }
 
   header .navbar-nav .nav-link {
@@ -60,18 +64,18 @@ body {
 
   header .navbar-nav .nav-link:hover,
   header .navbar-nav .nav-link.active {
-    background: rgba(255, 45, 149, 0.12);
+    background: rgba(255, 45, 150, 0.1);
   }
 
   .nav-socials {
     padding-top: 0.75rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
 /* ========================
-   Phablet / Large phone (≤768px)
-   ======================== */
+  Phablet / Large phone (≤768px)
+  ======================== */
 @media (max-width: 768px) {
   .carousel-item {
     aspect-ratio: 3 / 1;
@@ -101,8 +105,9 @@ body {
   /* Member profile stacks vertically */
   .member-hero-photo {
     width: 100%;
-    max-width: 16.25rem;
-    height: 20rem;
+    max-width: 16.5rem;
+    height: auto;
+    aspect-ratio: 17.5 / 22;
   }
 
   /* Member profile table — stacked label/value layout */
@@ -117,7 +122,7 @@ body {
 
   .member-profile-table tr {
     padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .member-profile-table tr:last-child {
@@ -147,8 +152,8 @@ body {
 }
 
 /* ========================
-   Phone (≤480px)
-   ======================== */
+  Phone (≤576px)
+  ======================== */
 @media (max-width: 576px) {
   .gallery-masonry {
     columns: 1;
@@ -178,8 +183,8 @@ body {
   }
 
   /* Latest album iframe */
-  .latest-album iframe {
-    min-height: 24rem;
+  .latest-album .spotify-embed {
+    min-height: 22.5rem;
   }
 
   /* Member cards — 3 per row on small screens */
@@ -190,13 +195,13 @@ body {
   }
 
   .members-preview .member-card p {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     line-height: 1.25;
   }
 
   /* Fun facts */
   .fun-fact-item {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     padding: 0.6rem 0.75rem;
   }
 

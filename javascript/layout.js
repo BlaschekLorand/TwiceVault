@@ -1,4 +1,5 @@
 (function () {
+    // Keys and static config.
     var ACCESSIBILITY_STORAGE_KEY = 'twicevault-accessibility-variant';
 
     var pageConfig = {
@@ -45,11 +46,13 @@
         }
     ];
 
+    // Page detection.
     function currentFileName() {
         var parts = window.location.pathname.split('/');
         return parts[parts.length - 1] || 'index.html';
     }
 
+    // HTML builders.
     function renderNavLinks(activeHref) {
         return navItems.map(function (item) {
             var isActive = item.href === activeHref;
@@ -82,6 +85,7 @@
             '</li>';
     }
 
+    // Accessibility state.
     function getStoredAccessibilityPreference() {
         try {
             return localStorage.getItem(ACCESSIBILITY_STORAGE_KEY) === 'on';
@@ -94,7 +98,7 @@
         try {
             localStorage.setItem(ACCESSIBILITY_STORAGE_KEY, enabled ? 'on' : 'off');
         } catch (e) {
-            // Ignore storage failures in restricted contexts.
+            // Ignore storage errors.
         }
     }
 
@@ -126,11 +130,12 @@
         });
     }
 
+    // Header and footer renderers.
     function renderHeader(config) {
         return '<nav class="navbar navbar-expand-lg py-2" aria-label="Primary">' +
             '<div class="container position-relative gap-3">' +
             '<a href="index.html" class="navbar-brand logo me-3 d-flex align-items-center"><img src="img/TWICE_LOGO.png" alt="TWICE Logo"></a>' +
-            '<span class="navbar-text nav-title d-none d-lg-inline-flex" id="nav-title">' + config.navTitle + '</span>' +
+            '<span class="navbar-text nav-title d-none d-xl-inline-flex" id="nav-title">' + config.navTitle + '</span>' +
             '<button class="navbar-toggler collapsed ms-auto border-0 shadow-none px-2" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">' +
             '<span class="navbar-toggler-box" aria-hidden="true"><span class="navbar-toggler-inner"></span></span></button>' +
             '<div class="collapse navbar-collapse nav-shell mt-3 mt-lg-0" id="siteNav">' +
@@ -154,6 +159,7 @@
             '</div>';
     }
 
+            // Mount header/footer.
     var config = pageConfig[currentFileName()] || pageConfig['index.html'];
     var header = document.querySelector('[data-site-header]');
     var footer = document.querySelector('[data-site-footer]');
@@ -166,5 +172,6 @@
         footer.innerHTML = renderFooter();
     }
 
+    // Enable a11y toggle after header is mounted.
     setupAccessibilityToggle();
 })();

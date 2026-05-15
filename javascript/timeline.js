@@ -1,4 +1,3 @@
-/* Timeline: animate items + fast nearby preload + unload embeds far off-screen */
 (function () {
   var wrapper = document.querySelector('.timeline-wrapper');
   if (!wrapper) return;
@@ -10,12 +9,16 @@
   var processing = false;
   var scheduled = false;
 
-  var REVEAL_BEFORE = 80;
-  var REVEAL_AFTER = 180;
-  var PRELOAD_BEFORE = 300;
-  var PRELOAD_AFTER = 1200;
-  var KEEP_BEFORE = 900;
-  var KEEP_AFTER = 1600;
+  // Distance thresholds in px.
+  var WINDOW = {
+    REVEAL_BEFORE: 80,
+    REVEAL_AFTER: 180,
+    PRELOAD_BEFORE: 300,
+    PRELOAD_AFTER: 1200,
+    KEEP_BEFORE: 900,
+    KEEP_AFTER: 1600
+  };
+
   var LOAD_DELAY = 60;
 
   function getRelativeRect(item) {
@@ -63,7 +66,7 @@
     var item = queue.shift();
     item.removeAttribute('data-queued');
 
-    if (isInsideWindow(item, PRELOAD_BEFORE, PRELOAD_AFTER)) {
+    if (isInsideWindow(item, WINDOW.PRELOAD_BEFORE, WINDOW.PRELOAD_AFTER)) {
       loadItem(item);
     }
 
@@ -82,16 +85,16 @@
 
   function updateTimeline() {
     items.forEach(function (item) {
-      if (isInsideWindow(item, REVEAL_BEFORE, REVEAL_AFTER)) {
+      if (isInsideWindow(item, WINDOW.REVEAL_BEFORE, WINDOW.REVEAL_AFTER)) {
         item.classList.add('visible');
       }
 
-      if (isInsideWindow(item, PRELOAD_BEFORE, PRELOAD_AFTER)) {
+      if (isInsideWindow(item, WINDOW.PRELOAD_BEFORE, WINDOW.PRELOAD_AFTER)) {
         queueItem(item);
         return;
       }
 
-      if (!isInsideWindow(item, KEEP_BEFORE, KEEP_AFTER)) {
+      if (!isInsideWindow(item, WINDOW.KEEP_BEFORE, WINDOW.KEEP_AFTER)) {
         unloadItem(item);
       }
     });
