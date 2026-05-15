@@ -1,3 +1,4 @@
+/* Hero */
 .hero-heading-wrap,
 .disco-hero {
   background: linear-gradient(180deg, rgba(255, 45, 150, 0.1), rgba(0, 0, 0, 0));
@@ -8,6 +9,7 @@
   text-shadow: 0 0 20px rgba(255, 45, 150, 0.3);
 }
 
+/* Carousel */
 .carousel-item {
   aspect-ratio: 9 / 2;
   overflow: hidden;
@@ -37,6 +39,7 @@
   cursor: pointer;
 }
 
+/* Surfaces */
 :is(.member-hero-photo, .fun-fact-item, .timeline-content, .top-track-mobile-card, .top-track-mobile-stat, .gallery-thumb, .member-profile-table, .top-tracks-table, .request-form .form-control) {
   background: linear-gradient(180deg, var(--surface), var(--surface-strong));
   border: 1px solid var(--surface-border);
@@ -44,6 +47,7 @@
   backdrop-filter: blur(10px);
 }
 
+/* Motion */
 :is(.member-hero-photo, .fun-fact-item, .timeline-content, .top-track-mobile-card, .top-track-mobile-stat, .gallery-thumb, .member-profile-table, .top-tracks-table),
 :is(.carousel-pause-btn, .gallery-filter, .request-form .btn, .gallery-lightbox-close, .gallery-lightbox-prev, .gallery-lightbox-next),
 .member-img,
@@ -61,12 +65,14 @@
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
 }
 
+/* Hover */
 .member-card:hover .member-img,
 .gallery-thumb:hover img {
   transform: scale(1.05);
   filter: drop-shadow(0 0 10px rgba(0, 240, 255, 0.25));
 }
 
+/* Members */
 .member-img {
   width: 7.5rem;
   height: 7.5rem;
@@ -78,6 +84,7 @@
   aspect-ratio: 17.5 / 22;
 }
 
+/* Tables */
 .member-profile-table,
 .top-tracks-table {
   --bs-table-bg: transparent;
@@ -120,11 +127,13 @@
   background: rgba(0, 240, 255, 0.05);
 }
 
+/* Facts */
 .fun-fact-item {
   padding: 0.75rem 1rem;
   border-radius: 0.85rem;
 }
 
+/* Spotify */
 .spotify-embed,
 .spotify-embed-sm {
   width: 100%;
@@ -143,6 +152,7 @@
   height: clamp(5rem, 10vw, 6rem);
 }
 
+/* Timeline */
 .timeline-wrapper {
   max-height: 420px;
   overflow: auto;
@@ -227,6 +237,7 @@
   background: rgba(0, 240, 255, 0.1);
 }
 
+/* Quickfacts */
 .quick-facts-details {
   border: 1px solid var(--surface-border);
   border-radius: 1rem;
@@ -270,6 +281,7 @@
   font-weight: 600;
 }
 
+/* Mobile */
 .top-tracks-mobile-list {
   display: none;
 }
@@ -320,6 +332,7 @@
   color: var(--text-soft);
 }
 
+/* Form */
 .request-form .form-control {
   color: inherit;
 }
@@ -353,6 +366,7 @@
   min-height: 45px;
 }
 
+/* Gallery */
 .gallery-filter {
   min-height: 45px;
   padding-block: 0.5rem;

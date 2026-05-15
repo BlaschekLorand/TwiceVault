@@ -181,7 +181,7 @@ const MEMBERS = {
     }
 };
 
-// Member page rendering.
+// Member rendering
 document.addEventListener('DOMContentLoaded', function () {
     var id = new URLSearchParams(window.location.search).get('id');
     var member = id ? MEMBERS[id.toLowerCase()] : null;

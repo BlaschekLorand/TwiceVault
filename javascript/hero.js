@@ -1,3 +1,4 @@
+// Hero Carousel
 (function () {
   var inner = document.getElementById('heroSlides');
   var indicators = document.querySelector('#heroCarousel .carousel-indicators');
@@ -36,7 +37,7 @@
     });
   }
 
-  // Toggle play/pause button state.
+  // Toggle
   function setupPauseButton() {
     var pauseBtn = document.querySelector('.carousel-pause-btn');
     if (!pauseBtn || !window.bootstrap || !bootstrap.Carousel) return;
@@ -60,7 +61,7 @@
     });
   }
 
-  // Load the next image only when needed.
+  //Lazy load
   function setupLazyLoadOnSlide() {
     carousel.addEventListener('slide.bs.carousel', function (e) {
       var next = inner.querySelectorAll('.carousel-item')[e.to];

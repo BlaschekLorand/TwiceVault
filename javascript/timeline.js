@@ -1,4 +1,5 @@
 (function () {
+  // Setup
   var wrapper = document.querySelector('.timeline-wrapper');
   if (!wrapper) return;
 
@@ -9,7 +10,7 @@
   var processing = false;
   var scheduled = false;
 
-  // Distance thresholds in px.
+  // Window
   var WINDOW = {
     REVEAL_BEFORE: 80,
     REVEAL_AFTER: 180,
@@ -31,11 +32,13 @@
     };
   }
 
+  // Visibility
   function isInsideWindow(item, before, after) {
     var rect = getRelativeRect(item);
     return rect.bottom >= -before && rect.top <= wrapper.clientHeight + after;
   }
 
+  // Load
   function loadItem(item) {
     var iframe = item.querySelector('iframe[data-src]');
     if (!iframe) return;
@@ -47,6 +50,7 @@
     if (h3) iframe.title = h3.textContent + ' – Spotify player';
   }
 
+  // Unload
   function unloadItem(item) {
     var iframe = item.querySelector('iframe[src]');
     if (!iframe) return;
@@ -56,6 +60,7 @@
     item.removeAttribute('data-queued');
   }
 
+  // Queue
   function processQueue() {
     if (!queue.length) {
       processing = false;

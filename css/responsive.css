@@ -1,6 +1,3 @@
-/* ========================
-   Prevent horizontal scroll
-   ======================== */
 html,
 body {
   overflow-x: hidden;
@@ -13,10 +10,7 @@ body {
   box-sizing: border-box;
 }
 
-/* ========================
-  Below XXL (≤1399.98px)
-  ======================== */
-@media (max-width: 1399.98px) {
+@media (max-width: 1400px) {
   .gallery-masonry {
     columns: 3;
   }
@@ -26,10 +20,8 @@ body {
   }
 }
 
-/* ========================
-   Navbar collapse (≤991.98px)
-   ======================== */
-@media (max-width: 991.98px) {
+/* Desktop */
+@media (max-width: 1000px) {
   .nav-title {
     display: none !important;
   }
@@ -73,10 +65,8 @@ body {
   }
 }
 
-/* ========================
-  Phablet / Large phone (≤768px)
-  ======================== */
-@media (max-width: 768px) {
+/* Tablet */
+@media (max-width: 800px) {
   .carousel-item {
     aspect-ratio: 3 / 1;
   }
@@ -85,7 +75,6 @@ body {
     columns: 2;
   }
 
-  /* Timeline collapses to single column */
   .timeline::before {
     left: 20px;
   }
@@ -102,7 +91,6 @@ body {
     right: auto !important;
   }
 
-  /* Member profile stacks vertically */
   .member-hero-photo {
     width: 100%;
     max-width: 16.5rem;
@@ -110,7 +98,6 @@ body {
     aspect-ratio: 17.5 / 22;
   }
 
-  /* Member profile table — stacked label/value layout */
   .member-profile-table,
   .member-profile-table tbody,
   .member-profile-table tr,
@@ -145,16 +132,13 @@ body {
     color: #e0e0e0;
   }
 
-  /* Shrink display heading */
   .display-4 {
     font-size: 2rem;
   }
 }
 
-/* ========================
-  Phone (≤576px)
-  ======================== */
-@media (max-width: 576px) {
+/* Mobile */
+@media (max-width: 500px) {
   .gallery-masonry {
     columns: 1;
   }
@@ -171,23 +155,19 @@ body {
     text-align: left;
   }
 
-  /* Tighter section padding */
   .py-5 {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
 
-  /* Carousel aspect ratio */
   .carousel-item {
     aspect-ratio: 2 / 1;
   }
 
-  /* Latest album iframe */
   .latest-album .spotify-embed {
     min-height: 22.5rem;
   }
 
-  /* Member cards — 3 per row on small screens */
   .members-preview .member-img {
     width: min(100%, 80px);
     height: auto;
@@ -199,13 +179,11 @@ body {
     line-height: 1.25;
   }
 
-  /* Fun facts */
   .fun-fact-item {
     font-size: 0.9rem;
     padding: 0.6rem 0.75rem;
   }
 
-  /* Form buttons full width on small screens */
   .col-12.d-flex.gap-3 {
     flex-direction: column;
   }
@@ -214,7 +192,6 @@ body {
     width: 100%;
   }
 
-  /* Display heading */
   .display-4 {
     font-size: 1.7rem;
   }

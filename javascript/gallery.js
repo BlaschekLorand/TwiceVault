@@ -5,7 +5,7 @@
   var THUMB_MAX_WIDTH = 640;
   var THUMB_QUALITY = 0.76;
 
-  // Build smaller in-memory thumbnails for faster scrolling.
+  // Thumbnail generation
   function createClientThumbnail(img) {
     if (img.getAttribute('data-thumb-ready') === 'true') return;
     if (!img.naturalWidth || !img.naturalHeight) return;
@@ -72,7 +72,7 @@
     });
   }
 
-  // Lightbox state.
+  // Lightbox
   var lightbox = document.getElementById('galleryLightbox');
   var lbImg = lightbox ? lightbox.querySelector('.gallery-lightbox-img') : null;
   var currentIndex = 0;

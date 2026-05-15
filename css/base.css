@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
-/* ========================
-   Variables
-   ======================== */
-
 :root {
   --primary: #ff2d95;
   --primary-dark: #cc1a75;
-  --primary-glow: rgba(255, 45, 150, 0.6);
+  --primary-glow: rgba(255, 45, 150, 0.5);
   --accent: #00f0ff;
   --accent-glow: rgba(0, 240, 255, 0.5);
   --bg: #0d0d0d;
@@ -17,17 +13,15 @@
   --surface: rgba(25, 25, 45, 0.9);
   --surface-strong: rgba(15, 15, 30, 0.95);
   --surface-border: rgba(255, 255, 255, 0.1);
-  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.3);
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.5);
   --link-unvisited: #87ecff;
   --link-visited: #9aaab9;
   --scrollbar-track: rgba(255, 255, 255, 0.1);
-  --scrollbar-thumb: linear-gradient(180deg, rgba(255, 45, 150, 0.9), rgba(0, 240, 255, 0.8));
+  --scrollbar-thumb: linear-gradient(180deg, rgba(255, 45, 150, 0.9), rgba(0, 240, 255, 0.9));
   --scrollbar-thumb-hover: linear-gradient(180deg, #ff66b6, #41f7ff);
 }
 
-/* ========================
-   Base
-   ======================== */
+/* Base */
 
 body {
   font-family: 'Inter', sans-serif;
@@ -102,13 +96,11 @@ h6 {
   color: var(--text);
 }
 
-/* ========================
-   Header & Navigation
-   ======================== */
+/* Header and Navigation */
 
 header {
   background: linear-gradient(180deg, rgba(30, 30, 50, 0.95), rgba(15, 15, 30, 0.95));
-  box-shadow: 0 2px 8px rgba(255, 45, 150, 0.25), 0 8px 20px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 2px 8px rgba(255, 45, 150, 0.25), 0 8px 20px rgba(0, 0, 0, 0.25);
   border-bottom: 1px solid rgba(255, 45, 150, 0.2);
   backdrop-filter: blur(10px);
 }
@@ -127,7 +119,7 @@ header .navbar>.container {
 
 .logo img {
   height: 35px;
-  filter: drop-shadow(0 0 8px var(--primary-glow));
+  filter: drop-shadow(0 0 10px var(--primary-glow));
   transition: filter 0.2s, transform 0.2s;
 }
 
@@ -217,7 +209,7 @@ header .navbar-nav .nav-link:visited:not(.active) {
   color: #110;
   background: #ffe600;
   border-color: #ffe600;
-  box-shadow: 0 0 0 2px rgba(255, 230, 0, 0.35);
+  box-shadow: 0 0 0 2px rgba(255, 230, 0, 0.30);
 }
 
 .nav-socials .nav-link:hover {
@@ -285,7 +277,6 @@ header .navbar-toggler:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
   }
 
   .nav-shell {
@@ -319,9 +310,7 @@ header .navbar-toggler:hover {
   left: 0;
 }
 
-/* ========================
-   Buttons
-   ======================== */
+/* Buttons */
 
 .btn-neon {
   background: linear-gradient(135deg, #ff78bf, #ff2d95);
@@ -353,9 +342,7 @@ header .navbar-toggler:hover {
   transform: translateY(-2px);
 }
 
-/* ========================
-   Footer
-   ======================== */
+/* Footer */
 
 footer {
   color: var(--text-soft);
@@ -387,9 +374,7 @@ hr.container.border-secondary {
   border-color: rgba(255, 255, 255, 0.15) !important;
 }
 
-/* ========================
-   Links
-   ======================== */
+/* Links */
 
 main a:link {
   color: var(--link-unvisited);
@@ -423,9 +408,7 @@ main p a:hover,
   color: var(--accent);
 }
 
-/* ========================
-   Accessibility Variant
-   ======================== */
+/* Accessibility Variant */
 
 body.accessibility-variant {
   --primary: #ffffff;

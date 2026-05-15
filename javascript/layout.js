@@ -1,5 +1,5 @@
 (function () {
-    // Keys and static config.
+    // Config.
     var ACCESSIBILITY_STORAGE_KEY = 'twicevault-accessibility-variant';
 
     var pageConfig = {
@@ -46,13 +46,11 @@
         }
     ];
 
-    // Page detection.
     function currentFileName() {
         var parts = window.location.pathname.split('/');
         return parts[parts.length - 1] || 'index.html';
     }
 
-    // HTML builders.
     function renderNavLinks(activeHref) {
         return navItems.map(function (item) {
             var isActive = item.href === activeHref;
@@ -85,7 +83,7 @@
             '</li>';
     }
 
-    // Accessibility state.
+    // Accessibility
     function getStoredAccessibilityPreference() {
         try {
             return localStorage.getItem(ACCESSIBILITY_STORAGE_KEY) === 'on';
@@ -98,7 +96,7 @@
         try {
             localStorage.setItem(ACCESSIBILITY_STORAGE_KEY, enabled ? 'on' : 'off');
         } catch (e) {
-            // Ignore storage errors.
+            // Ignore storage errors
         }
     }
 
@@ -130,7 +128,7 @@
         });
     }
 
-    // Header and footer renderers.
+    // Header and footer
     function renderHeader(config) {
         return '<nav class="navbar navbar-expand-lg py-2" aria-label="Primary">' +
             '<div class="container position-relative gap-3">' +
@@ -159,7 +157,7 @@
             '</div>';
     }
 
-            // Mount header/footer.
+    // Mount
     var config = pageConfig[currentFileName()] || pageConfig['index.html'];
     var header = document.querySelector('[data-site-header]');
     var footer = document.querySelector('[data-site-footer]');
@@ -172,6 +170,5 @@
         footer.innerHTML = renderFooter();
     }
 
-    // Enable a11y toggle after header is mounted.
     setupAccessibilityToggle();
 })();
